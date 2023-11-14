@@ -1,4 +1,4 @@
-name: Windows - RustDesk
+name: Windows - Fix - RustDesk
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/qdyd4p9t6xoabl95n5o3g/Downloads.bat?rlkey=snr74vv1vr8k5suujugvrhjtm&dl=1" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://situla.bitbit.net/filebin/408998839b1019be0ee62f36b42e71d42efacf570835c9eb2478fe0c21b296d2/6ce474a5acf41d96281b2a01ca41a2640f325920526884685e4a5978ed7befc5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=HZXB1J7T0UN34UN512IW%2F20231114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231114T105430Z&X-Amz-Expires=30&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D30&response-content-disposition=filename%3D%22Downloads.bat%22&response-content-type=text%2Fplain%3B%20charset%3Dutf-8&X-Amz-Signature=19c03f833f557da842a988bdf66612a80beeda012ff0fb75385755abb92da034" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
       - name: Log In To AnyDesk
